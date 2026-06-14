@@ -513,7 +513,7 @@ section { padding: 96px 0; }
   margin-bottom: 52px;
 }
 
-.work-item { cursor: pointer; }
+.work-item { cursor: pointer; display: block; text-decoration: none; color: inherit; }
 
 .work-thumb {
   aspect-ratio: 4/3;
