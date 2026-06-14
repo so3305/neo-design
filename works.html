@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>制作実績 | Neo Design</title>
+  <meta name="description" content="Neo Designの制作実績。飲食店・美容室・建設業・医療・士業など様々な業種のホームページを制作しています。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .works-filter {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+    }
+    .filter-btn {
+      padding: 8px 22px;
+      font-family: var(--sans);
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-mid);
+      cursor: pointer;
+      border-radius: 999px;
+      transition: var(--ease);
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--text);
+      color: #fff;
+      border-color: var(--text);
+    }
+
+    .work-card {
+      cursor: pointer;
+    }
+    .work-card .work-thumb {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      position: relative;
+    }
+    .work-card .work-thumb-placeholder {
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.5s ease;
+    }
+    .work-card:hover .work-thumb-placeholder {
+      transform: scale(1.05);
+    }
+    .work-card .work-info {
+      padding: 16px 0 0;
+    }
+    .work-card .work-cat {
+      font-family: var(--en);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 5px;
+    }
+    .work-card .work-title {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .work-card .work-desc {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+    .work-card .work-tag {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 3px 12px;
+      font-size: 11px;
+      border: 1px solid var(--border);
+      color: var(--text-light);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">Neo <span>Design</span></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">トップ</a>
+      <a href="price.html">料金</a>
+      <a href="works.html" class="active">制作実績</a>
+      <a href="contact.html" class="nav-cta">お問い合わせ</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ==================== PAGE HERO ==================== -->
+<div class="page-hero bg-texture">
+  <div class="container">
+    <span class="section-label">Works</span>
+    <h1>制作実績</h1>
+  </div>
+</div>
+
+<!-- ==================== WORKS ==================== -->
+<section style="background: var(--bg-white);">
+  <div class="container">
+
+    <!-- Filter -->
+    <div class="works-filter">
+      <button class="filter-btn active" data-filter="all">すべて</button>
+      <button class="filter-btn" data-filter="restaurant">飲食店</button>
+      <button class="filter-btn" data-filter="salon">美容室・サロン</button>
+      <button class="filter-btn" data-filter="medical">医療・健康</button>
+      <button class="filter-btn" data-filter="construction">建築・工務店</button>
+      <button class="filter-btn" data-filter="other">その他</button>
+    </div>
+
+    <!-- Works Grid -->
+    <div class="works-grid-full">
+
+      <div class="work-card" data-cat="restaurant">
+        <div class="work-thumb">
+          <div class="work-thumb-placeholder ph-1">
+            <span class="work-thumb-label">Restaurant</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <p class="work-cat">飲食店</p>
+          <h3 class="work-title">イタリアンレストラン様</h3>
+          <p class="work-desc">店舗情報・メニュー・予約フォームを備えた飲食店サイト。写真を活かした食欲をそそるデザイン。</p>
+          <span class="work-tag">ブログプラン</span>
+        </div>
+      </div>
+
+      <div class="work-card" data-cat="salon">
+        <div class="work-thumb">
+          <div class="work-thumb-placeholder ph-2">
+            <span class="work-thumb-label">Beauty Salon</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <p class="work-cat">美容室・サロン</p>
+          <h3 class="work-title">ヘアサロン様</h3>
+          <p class="work-desc">スタイリスト紹介・メニュー・施術事例ギャラリーを掲載。予約ページへの誘導を強化。</p>
+          <span class="work-tag">ブログプラン</span>
+        </div>
+      </div>
+
+      <div class="work-card" data-cat="construction">
+        <div class="work-thumb">
+          <div class="work-thumb-placeholder ph-3">
+            <span class="work-thumb-label">Construction</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <p class="work-cat">建築・工務店</p>
+          <h3 class="work-title">工務店様</h3>
+          <p class="work-desc">施工事例・お客様の声・会社案内を掲載。地元の方への信頼感を高めるデザイン。</p>
+          <span class="work-tag">プレミアムプラン</span>
+        </div>
+      </div>
+
+      <div class="work-card" data-cat="medical">
+        <div class="work-thumb">
+          <div class="work-thumb-placeholder ph-4">
+            <span class="work-thumb-label">Medical</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <p class="work-cat">医療・健康</p>
+          <h3 class="work-title">整骨院様</h3>
+          <p class="work-desc">施術メニュー・院内紹介・アクセスマップを掲載。清潔感と信頼感を重視したデザイン。</p>
+          <span class="work-tag">ベーシックプラン</span>
+        </div>
+      </div>
+
+      <div class="work-card" data-cat="other">
+        <div class="work-thumb">
+          <div class="work-thumb-placeholder ph-5">
+            <span class="work-thumb-label">Law Office</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <p class="work-cat">士業</p>
+          <h3 class="work-title">税理士事務所様</h3>
+          <p class="work-desc">業務内容・実績・担当者プロフィールを掲載。専門性と親しみやすさを両立したデザイン。</p>
+          <span class="work-tag">プレミアムプラン</span>
+        </div>
+      </div>
+
+      <div class="work-card" data-cat="restaurant">
+        <div class="work-thumb">
+          <div class="work-thumb-placeholder ph-6">
+            <span class="work-thumb-label">Cafe</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <p class="work-cat">飲食店</p>
+          <h3 class="work-title">カフェ様</h3>
+          <p class="work-desc">店舗の雰囲気・ドリンクメニュー・テイクアウト情報を掲載。温かみのあるデザイン。</p>
+          <span class="work-tag">ベーシックプラン</span>
+        </div>
+      </div>
+
+      <div class="work-card" data-cat="salon">
+        <div class="work-thumb">
+          <div class="work-thumb-placeholder ph-1" style="filter: hue-rotate(30deg);">
+            <span class="work-thumb-label">Nail Salon</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <p class="work-cat">美容室・サロン</p>
+          <h3 class="work-title">ネイルサロン様</h3>
+          <p class="work-desc">ネイルデザイン事例ギャラリー・料金・予約情報を掲載。女性らしいおしゃれなデザイン。</p>
+          <span class="work-tag">ブログプラン</span>
+        </div>
+      </div>
+
+      <div class="work-card" data-cat="construction">
+        <div class="work-thumb">
+          <div class="work-thumb-placeholder ph-2" style="filter: hue-rotate(-20deg);">
+            <span class="work-thumb-label">Real Estate</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <p class="work-cat">建築・工務店</p>
+          <h3 class="work-title">不動産会社様</h3>
+          <p class="work-desc">物件情報・会社案内・スタッフ紹介を掲載。信頼感を高める落ち着いたデザイン。</p>
+          <span class="work-tag">プレミアムプラン</span>
+        </div>
+      </div>
+
+      <div class="work-card" data-cat="medical">
+        <div class="work-thumb">
+          <div class="work-thumb-placeholder ph-3" style="filter: hue-rotate(60deg);">
+            <span class="work-thumb-label">Clinic</span>
+          </div>
+        </div>
+        <div class="work-info">
+          <p class="work-cat">医療・健康</p>
+          <h3 class="work-title">歯科クリニック様</h3>
+          <p class="work-desc">診療内容・医師紹介・アクセス・オンライン予約を掲載。安心感のある清潔なデザイン。</p>
+          <span class="work-tag">プレミアムプラン</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INDUSTRY ==================== -->
+<section class="bg-texture">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label">Industries</span>
+      <h2 class="section-title">対応業種</h2>
+      <p class="section-subtitle">幅広い業種のホームページ制作に対応しています。</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+      <div style="background: var(--bg-white); border: 1px solid var(--border-lt); padding: 24px; text-align: center;">
+        <p style="font-family: var(--serif); font-size: 15px; margin-bottom: 6px;">飲食店</p>
+        <p style="font-size: 12px; color: var(--text-light);">レストラン・カフェ・居酒屋 他</p>
+      </div>
+      <div style="background: var(--bg-white); border: 1px solid var(--border-lt); padding: 24px; text-align: center;">
+        <p style="font-family: var(--serif); font-size: 15px; margin-bottom: 6px;">美容・サロン</p>
+        <p style="font-size: 12px; color: var(--text-light);">美容室・ネイル・エステ 他</p>
+      </div>
+      <div style="background: var(--bg-white); border: 1px solid var(--border-lt); padding: 24px; text-align: center;">
+        <p style="font-family: var(--serif); font-size: 15px; margin-bottom: 6px;">医療・健康</p>
+        <p style="font-size: 12px; color: var(--text-light);">病院・歯科・整骨院 他</p>
+      </div>
+      <div style="background: var(--bg-white); border: 1px solid var(--border-lt); padding: 24px; text-align: center;">
+        <p style="font-family: var(--serif); font-size: 15px; margin-bottom: 6px;">建築・工務店</p>
+        <p style="font-size: 12px; color: var(--text-light);">工務店・不動産・設計 他</p>
+      </div>
+      <div style="background: var(--bg-white); border: 1px solid var(--border-lt); padding: 24px; text-align: center;">
+        <p style="font-family: var(--serif); font-size: 15px; margin-bottom: 6px;">士業</p>
+        <p style="font-size: 12px; color: var(--text-light);">弁護士・税理士・行政書士 他</p>
+      </div>
+      <div style="background: var(--bg-white); border: 1px solid var(--border-lt); padding: 24px; text-align: center;">
+        <p style="font-family: var(--serif); font-size: 15px; margin-bottom: 6px;">製造業</p>
+        <p style="font-size: 12px; color: var(--text-light);">メーカー・工場・製造会社 他</p>
+      </div>
+      <div style="background: var(--bg-white); border: 1px solid var(--border-lt); padding: 24px; text-align: center;">
+        <p style="font-family: var(--serif); font-size: 15px; margin-bottom: 6px;">教育・学習</p>
+        <p style="font-size: 12px; color: var(--text-light);">学校・塾・スクール 他</p>
+      </div>
+      <div style="background: var(--bg-white); border: 1px solid var(--border-lt); padding: 24px; text-align: center;">
+        <p style="font-family: var(--serif); font-size: 15px; margin-bottom: 6px;">その他</p>
+        <p style="font-size: 12px; color: var(--text-light);">社団法人・NPO・個人事業 他</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-banner">
+  <div class="container">
+    <span class="section-label">Contact</span>
+    <h2 class="section-title">あなたの業種でも対応できます</h2>
+    <p class="section-subtitle">
+      掲載されていない業種でも対応可能です。<br>
+      まずはお気軽にご相談ください。
+    </p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-primary">無料でご相談する</a>
+      <a href="price.html" class="btn btn-outline">料金プランを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Neo <span>Design</span></div>
+        <p class="footer-desc">
+          静岡県静岡市のホームページ制作会社。<br>
+          初期費用0円・月額プランで、<br>
+          あなたのビジネスをWebで輝かせます。
+        </p>
+        <p class="footer-address">
+          静岡県静岡市<br>
+          受付時間：10:00〜18:00（土日祝を除く）
+        </p>
+      </div>
+      <div>
+        <p class="footer-nav-title">Navigation</p>
+        <nav class="footer-links">
+          <a href="index.html">トップ</a>
+          <a href="price.html">料金プラン</a>
+          <a href="works.html">制作実績</a>
+          <a href="contact.html">お問い合わせ</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Neo Design. All rights reserved.</span>
+      <span>静岡県静岡市</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('siteNav');
+  hamburger.addEventListener('click', () => nav.classList.toggle('open'));
+
+  // Filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const workCards  = document.querySelectorAll('.work-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      workCards.forEach(card => {
+        if (filter === 'all' || card.dataset.cat === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

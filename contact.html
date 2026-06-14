@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | Neo Design</title>
+  <meta name="description" content="Neo Designへのお問い合わせ。ホームページ制作のご相談・お見積もりは無料です。静岡県静岡市のホームページ制作会社。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .privacy-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 8px 0;
+    }
+    .privacy-check input[type="checkbox"] {
+      width: auto;
+      margin-top: 3px;
+      accent-color: var(--accent);
+      flex-shrink: 0;
+    }
+    .privacy-check label {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+    .privacy-check label a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .submit-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 16px;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+    }
+
+    .form-note {
+      font-size: 12px;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-top: 16px;
+    }
+
+    .thanks-message {
+      display: none;
+      text-align: center;
+      padding: 48px 0;
+    }
+    .thanks-message h3 {
+      font-family: var(--serif);
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+    .thanks-message p {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 2;
+    }
+
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">Neo <span>Design</span></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">トップ</a>
+      <a href="price.html">料金</a>
+      <a href="works.html">制作実績</a>
+      <a href="contact.html" class="nav-cta active">お問い合わせ</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ==================== PAGE HERO ==================== -->
+<div class="page-hero bg-texture">
+  <div class="container">
+    <span class="section-label">Contact</span>
+    <h1>お問い合わせ</h1>
+  </div>
+</div>
+
+<!-- ==================== CONTACT ==================== -->
+<section style="background: var(--bg-white);">
+  <div class="container">
+
+    <div style="max-width: 680px; margin: 0 auto 56px;">
+      <p style="font-size: 15px; color: var(--text-mid); line-height: 2.1; text-align: center;">
+        ホームページ制作に関するご相談・お見積もりは無料です。<br>
+        お気軽にお問い合わせください。<br>
+        通常2〜3営業日以内にご返信いたします。
+      </p>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- Form -->
+      <div>
+        <form id="contactForm" novalidate>
+
+          <div class="form-row">
+            <div class="contact-form-group">
+              <label>お名前<span class="required">必須</span></label>
+              <input type="text" name="name" placeholder="山田 太郎" required>
+            </div>
+            <div class="contact-form-group">
+              <label>会社名・屋号<span style="color:var(--text-light); font-size:10px; margin-left:6px;">任意</span></label>
+              <input type="text" name="company" placeholder="〇〇株式会社">
+            </div>
+          </div>
+
+          <div class="contact-form-group">
+            <label>メールアドレス<span class="required">必須</span></label>
+            <input type="email" name="email" placeholder="example@email.com" required>
+          </div>
+
+          <div class="contact-form-group">
+            <label>ご希望のプラン<span style="color:var(--text-light); font-size:10px; margin-left:6px;">任意</span></label>
+            <select name="plan">
+              <option value="">選択してください</option>
+              <option value="basic">ベーシックプラン（¥6,200/月〜）</option>
+              <option value="blog">ブログプラン（¥7,800/月〜）</option>
+              <option value="premium">プレミアムプラン（¥10,200/月〜）</option>
+              <option value="undecided">まだ決めていない・相談したい</option>
+            </select>
+          </div>
+
+          <div class="contact-form-group">
+            <label>業種<span style="color:var(--text-light); font-size:10px; margin-left:6px;">任意</span></label>
+            <select name="industry">
+              <option value="">選択してください</option>
+              <option value="restaurant">飲食店</option>
+              <option value="salon">美容室・サロン</option>
+              <option value="medical">医療・健康</option>
+              <option value="construction">建築・工務店・不動産</option>
+              <option value="legal">士業（弁護士・税理士 など）</option>
+              <option value="manufacturing">製造業</option>
+              <option value="education">教育・学習</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+
+          <div class="contact-form-group">
+            <label>お問い合わせ内容<span class="required">必須</span></label>
+            <textarea name="message" placeholder="ご相談内容・ご要望などをご自由にお書きください。&#10;&#10;例）現在ホームページがなく、新規で制作をお願いしたいです。飲食店を経営しており、メニューや店舗情報を載せたいと考えています。" required></textarea>
+          </div>
+
+          <div class="contact-form-group">
+            <div class="privacy-check">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">
+                <a href="#privacy-policy">プライバシーポリシー</a>に同意する
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-accent submit-btn">送信する</button>
+          <p class="form-note">
+            ※ 送信後、確認メールをお送りします（自動送信）。届かない場合は迷惑メールフォルダをご確認ください。<br>
+            ※ 返信まで通常2〜3営業日かかります。
+          </p>
+
+        </form>
+
+        <div class="thanks-message" id="thanksMessage">
+          <h3>お問い合わせありがとうございます</h3>
+          <p>
+            ご入力いただいたメールアドレスに確認メールをお送りしました。<br>
+            2〜3営業日以内に担当者よりご連絡いたします。<br><br>
+            しばらくお待ちください。
+          </p>
+          <a href="index.html" class="btn btn-outline" style="margin-top: 32px;">トップページへ戻る</a>
+        </div>
+      </div>
+
+      <!-- Sidebar info -->
+      <div>
+        <div class="contact-info">
+          <h3 style="font-family: var(--serif); font-size: 17px; margin-bottom: 20px;">会社情報</h3>
+
+          <div class="contact-info-item">
+            <p class="contact-info-label">Company</p>
+            <p class="contact-info-text">Neo Design</p>
+          </div>
+
+          <div class="contact-info-item">
+            <p class="contact-info-label">Location</p>
+            <p class="contact-info-text">静岡県静岡市</p>
+          </div>
+
+          <div class="contact-info-item">
+            <p class="contact-info-label">Hours</p>
+            <p class="contact-info-text">
+              月〜金 10:00 〜 18:00<br>
+              <span style="font-size:12px; color:var(--text-light);">土日祝を除く</span>
+            </p>
+          </div>
+
+          <div class="contact-info-item">
+            <p class="contact-info-label">Service Area</p>
+            <p class="contact-info-text">
+              日本全国対応<br>
+              <span style="font-size:12px; color:var(--text-light);">オンライン打ち合わせ可</span>
+            </p>
+          </div>
+
+          <div class="contact-info-item" style="border-bottom: none;">
+            <p class="contact-info-label">Response Time</p>
+            <p class="contact-info-text">
+              2〜3営業日以内<br>
+              <span style="font-size:12px; color:var(--text-light);">お急ぎの場合はお知らせください</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Flow summary -->
+        <div style="margin-top: 24px; background: var(--bg); border: 1px solid var(--border-lt); padding: 28px 24px;">
+          <h4 style="font-family: var(--serif); font-size: 14px; margin-bottom: 16px; color: var(--text);">お問い合わせ後の流れ</h4>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="font-family: var(--en); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; margin-top: 2px;">01</span>
+              <p style="font-size: 13px; color: var(--text-mid);">担当者よりメールにてご連絡</p>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="font-family: var(--en); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; margin-top: 2px;">02</span>
+              <p style="font-size: 13px; color: var(--text-mid);">オンラインにてヒアリング</p>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="font-family: var(--en); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; margin-top: 2px;">03</span>
+              <p style="font-size: 13px; color: var(--text-mid);">お見積もり・プランのご提案</p>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="font-family: var(--en); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; margin-top: 2px;">04</span>
+              <p style="font-size: 13px; color: var(--text-mid);">ご契約・制作開始</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PRIVACY POLICY ==================== -->
+<section id="privacy-policy" style="background: var(--bg);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Privacy Policy</span>
+      <h2 class="section-title">プライバシーポリシー</h2>
+    </div>
+    <div style="max-width: 760px; font-size: 14px; color: var(--text-mid); line-height: 2.1;">
+      <p style="margin-bottom: 20px;">
+        Neo Design（以下「当社」）は、お客様からご提供いただく個人情報の重要性を認識し、適切な保護・管理に努めます。
+      </p>
+      <h4 style="font-family: var(--serif); font-size: 15px; color: var(--text); margin-bottom: 10px;">1. 個人情報の利用目的</h4>
+      <p style="margin-bottom: 20px;">
+        お問い合わせへの対応、ご提案・お見積もりの作成、サービスご提供のための連絡に利用します。
+      </p>
+      <h4 style="font-family: var(--serif); font-size: 15px; color: var(--text); margin-bottom: 10px;">2. 第三者への提供</h4>
+      <p style="margin-bottom: 20px;">
+        法令に基づく場合を除き、お客様の同意なく第三者に個人情報を提供することはありません。
+      </p>
+      <h4 style="font-family: var(--serif); font-size: 15px; color: var(--text); margin-bottom: 10px;">3. 個人情報の開示・訂正・削除</h4>
+      <p>
+        ご本人からの開示・訂正・削除のご依頼に対し、合理的な範囲で対応いたします。お問い合わせフォームよりご連絡ください。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Neo <span>Design</span></div>
+        <p class="footer-desc">
+          静岡県静岡市のホームページ制作会社。<br>
+          初期費用0円・月額プランで、<br>
+          あなたのビジネスをWebで輝かせます。
+        </p>
+        <p class="footer-address">
+          静岡県静岡市<br>
+          受付時間：10:00〜18:00（土日祝を除く）
+        </p>
+      </div>
+      <div>
+        <p class="footer-nav-title">Navigation</p>
+        <nav class="footer-links">
+          <a href="index.html">トップ</a>
+          <a href="price.html">料金プラン</a>
+          <a href="works.html">制作実績</a>
+          <a href="contact.html">お問い合わせ</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Neo Design. All rights reserved.</span>
+      <span>静岡県静岡市</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('siteNav');
+  hamburger.addEventListener('click', () => nav.classList.toggle('open'));
+
+  // Form submission (demo — shows thank you message)
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name     = this.name.value.trim();
+    const email    = this.email.value.trim();
+    const message  = this.message.value.trim();
+    const privacy  = this.privacy.checked;
+
+    if (!name || !email || !message || !privacy) {
+      alert('必須項目をすべてご入力ください。');
+      return;
+    }
+
+    // Show thanks (in a real site, POST to server here)
+    this.style.display = 'none';
+    document.getElementById('thanksMessage').style.display = 'block';
+    window.scrollTo({ top: document.getElementById('thanksMessage').offsetTop - 100, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
