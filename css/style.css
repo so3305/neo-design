@@ -532,6 +532,15 @@ section { padding: 96px 0; }
 }
 .work-item:hover .work-thumb-placeholder { transform: scale(1.04); }
 
+.work-thumb-iframe {
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: top left;
+  border: none;
+  pointer-events: none;
+}
+
 .work-thumb-label {
   font-family: var(--en);
   font-size: 10px;
